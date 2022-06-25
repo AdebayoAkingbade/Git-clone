@@ -1,0 +1,74 @@
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    background-color: #101316;
+}
+
+.nav-one{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 27px;
+}
+
+.right{
+    display: flex;
+    justify-self: flex-end;
+}
+
+.avatar{
+    object-fit: cover;
+    position: relative;
+    border-radius: 50%;
+    width: 40px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.nav_right{
+    margin-right: 30px;
+    margin-top: 6px;
+}
+
+.edit_nav{
+    position: relative;
+    left: -23px;
+}
+
+.NavDropdown{
+    color: #eee;
+}
+
+.nav_input{
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+    padding: 0 15px;
+    background-color: #101316;
+    border: 1px solid #eee;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.nav-one input:focus{
+    width: 400px;
+    border: 1px solid #eee;
+}
+
+
+.nav_image{
+    position:relative;
+    left: 25px;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.img_only{
+    margin-right: 40px;
+}

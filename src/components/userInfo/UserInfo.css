@@ -1,0 +1,38 @@
+.user_container{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user_container > img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user_infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user_details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user_info{
+    color: grey;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.user_infos > h5{
+    align-items: center;
+}
