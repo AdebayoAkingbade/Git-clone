@@ -39,29 +39,6 @@ function User() {
         </Routes>
       </Fragment>
     </Router>
-      {/* <Router>
-      <Routes>
-        <Container className={'top_space'}>
-          <Grid container spacing={9}>
-            <Grid item xs={12} sm={12} md={4} lg={3} style={{ boxShadow: '0px, 2px, 92px, 0px rgba(0, 0, 0, 0.13)' }}>
-              <UserInfo />
-            </Grid>
-            <Grid item xs >
-              <Header />
-              <div className='resport_container'>
-                <Route exact path='/'>
-                  <Resume />
-                </Route>
-                <Route exact path='/portfolio'>
-                  <Portfolio />
-                </Route>
-              </div>
-              <Footer />
-            </Grid>
-          </Grid>
-        </Container>
-      </Routes>
-    </Router> */}
     </div>
   )
 }
