@@ -1,2 +1,2 @@
 # Git-clone
-Cloning Github with ReactJS technology
+Cloning Github with Github API using ReactJS technology
