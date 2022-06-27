@@ -1,9 +1,14 @@
 import React from 'react'
 import './UserInfo.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFaceSmile } from '@fortawesome/free-solid-svg-icons'
 
 const UserInfo = () => (
   <div className='user_container'>
       <img src='https://avatars.githubusercontent.com/u/87953519?v=4' height='300' weight='130' className='p-2 avatat' alt='profile_pic' />
+      <div className='smiley_wrapper'>
+      <FontAwesomeIcon icon={faFaceSmile } className='smile_icon'/>
+      </div>
       <div className='user_infos'>
         <h5>Username</h5>
         <div className='user_details'>

@@ -30,9 +30,18 @@
     font-size: 14px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-right: 15px;
 }
 
 .user_infos > h5{
     align-items: center;
+}
+
+.smile_icon{
+    height: 25px;
+    position: relative;
+    left: 89px;
+    bottom: 50px;
+    cursor: pointer;
 }
