@@ -26,4 +26,10 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
+    line-height: 1.5rem;
+    max-height: 1.5rem;
+}
+
+.repo_title > span{
+    color: #0366d6;
 }
