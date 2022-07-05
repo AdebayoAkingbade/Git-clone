@@ -12,12 +12,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.5 ease-in;
+    transition: transform 0.5s ease-in;
 }
 
-.repo_container :hover{
-    transform: scale(1.1, 1.1);
-    filter: invert(1);
+.repo_container:hover{
+    transform: scale(0.9, 0.9);
+    filter: invert(5%);
+    background-color: rgb(134, 134, 134);
 }
 
 .repo_title{
@@ -32,4 +33,30 @@
 
 .repo_title > span{
     color: #0366d6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.desc{
+    color: rgb(90,90,90);
+    overflow: hidden;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.5rem;
+    max-height: 3rem;
+}
+
+.i{
+    color: gray;
+}
+
+.subtitle{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
 }

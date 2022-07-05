@@ -2,6 +2,7 @@ import { createContext, useState } from 'react';
 import './App.css';
 import User from './utils/User';
 import ReactSwitch from 'react-switch'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 export const ThemeContext = createContext(null)
 
@@ -14,9 +15,15 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, changeTheme}}>
       <div className="App" id={theme}>
-        <User />
-        <label>{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</label>
+      <BrowserRouter>
+      <Switch>
+        <Route path="/:userName" component={User} />
+        <Redirect to={'/adebayoakingbade'} />
+        {/* <User /> */}
+      </Switch>
+      </BrowserRouter>
       <ReactSwitch onChange={changeTheme} checked={theme === 'dark'}/>
+        <label>{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</label>
       </div>
     </ThemeContext.Provider>
   );

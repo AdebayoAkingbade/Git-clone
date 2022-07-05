@@ -1,47 +1,80 @@
-.user_container{
-    margin-top: 40px;
-    margin-bottom: 100%;
-    padding-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.user_container {
+  margin-top: 40px;
+  margin-bottom: 100%;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.user_container > img{
-    object-fit: cover;
-    border-radius: 50%;
+.user_container > img {
+  object-fit: cover;
+  border-radius: 50%;
+  background-size: cover;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
 }
 
-.user_infos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.user_container > img:hover {
+  border-radius: 0;
+  width: 450px;
+  height: 350px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(9, 55, 53, 0.08),
+    0px 16px 24px rgba(9, 55, 53, 0.1), 0px 24px 32px rgba(9, 55, 53, 0.14);
+    z-index:2;
 }
 
-.user_details{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+/* .user_container > img::before{
+        content: ' ';
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        bottom:0;
+        left:0;
+        margin:auto;
+        cursor: pointer;
+        background: inherit;
+        background-position:bottom;
+        filter:blur(40px) saturate(0%);
+        transform:scaleX(0.4);
+        transition:ease-in-out .4s;
+        border-radius:120px;
+        transform-origin:right;
+        opacity:0;
+        z-index:-1;
+} */
+
+.user_infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.user_info{
-    color: grey;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
+.user_details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.user_infos > h5{
-    align-items: center;
+.user_info {
+  color: grey;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
 }
 
-.smile_icon{
-    height: 25px;
-    position: relative;
-    left: 89px;
-    bottom: 50px;
-    cursor: pointer;
+.user_infos > h5 {
+  align-items: center;
+}
+
+.smile_icon {
+  height: 25px;
+  position: relative;
+  left: 89px;
+  bottom: 50px;
+  cursor: pointer;
 }

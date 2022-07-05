@@ -1,47 +1,60 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useEffect, useState} from 'react'
 import Header from '../components/navbar/Navbar'
 import Tab from '../components/tabs/Tab'
 import UserInfo from '../components/userInfo/UserInfo'
 import { Container, Grid } from '@material-ui/core'
-import { BrowserRouter as Router, Routes, } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, } from 'react-router-dom'
 import Repos from '../components/repositories/Repos'
+import { FetchRepos, FetchUser } from '../components/fetchData/FetchData'
+import Loader from '../components/loader/Loader'
 
-function User() {
+function User({match}) {
+
+  const [isUser, setIsUser] = useState()
+  const [isRepo, setIsRepo] = useState([])
+
+  const matchParams = match.params.userName
+
+  useEffect(()=>{
+    userData()
+    repoData()
+  }, [])
+
+  const userData = async()=>{
+    const user = FetchUser(matchParams)
+    setIsUser(user)
+  }
+
+  const repoData = async()=>{
+    const repo = await FetchRepos(matchParams)
+    setIsRepo(repo)
+  }
+
   return (
-    <div>
-      <Router>
+    <>
+      {isUser ? (
+        <>
+        <Router>
       <Fragment>
-        <Header/>
+        <Header user = {isUser}/>
         <Container>
           <Grid container spacing={10}>
             <Grid item xs={12} sm={12} md={4} lg={3} style={{ boxShadow: '0px, 2px, 92px, 0px rgba(0, 0, 0, 0.13)' }}>
-            <UserInfo />
+            <UserInfo user = {isUser}/>
             </Grid>
             <Grid item xs >
-              <Tab />
-              <Repos />
-              {/* <div className='resport_container'>
-                <Route exact path='/'>
-                  <Resume />
-                </Route>
-                <Route exact path='/portfolio'>
-                  <Portfolio />
-                </Route>
-              </div>
-              <Footer /> */}
+              <Tab user = {isUser} repos = {isRepo}/>
+              <Repos user = {isUser} repos = {isRepo}/>
             </Grid>
           </Grid>
           </Container>
-        <Routes>
-          {/* <Route exact path='/' element={<PrivateRoute/>}>
-            <Route exact path='/' element={<Home/>}/>
-          </Route>
-          <Route exact path='/register' element={<Register/>}/>
-          <Route exact path='/login' element={<Login/>}/> */}
-        </Routes>
       </Fragment>
     </Router>
-    </div>
+        </>
+      ):(
+        <Loader />
+      )}
+    </>
   )
 }
 
