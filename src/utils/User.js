@@ -21,7 +21,7 @@ function User({match}) {
   }, [])
 
   const userData = async()=>{
-    const user = FetchUser(matchParams)
+    const user = await FetchUser(matchParams)
     setIsUser(user)
   }
 
