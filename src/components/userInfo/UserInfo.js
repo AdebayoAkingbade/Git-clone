@@ -1,5 +1,6 @@
 import React from 'react'
 import './UserInfo.css'
+import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFaceSmile } from '@fortawesome/free-solid-svg-icons'
 
@@ -11,6 +12,11 @@ const UserInfo = ({user}) => (
       </div>
       <div className='user_infos'>
         <h5>{user.name}</h5>
+        <div className="d-grid gap-2" style={{padding:'8px 5px'}}>
+            <Button variant="secondary" size="lg" style={{padding:'8px 25px'}}>
+              Edit Profile
+            </Button>
+          </div>
         <div className='user_details'>
           {user.location && (
             <div className='user_info'>

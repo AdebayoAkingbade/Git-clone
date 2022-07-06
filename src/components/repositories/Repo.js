@@ -1,27 +1,27 @@
 import React from 'react';
 import './Repo.css'
 
-const Repo = () => (
+const Repo = ({repo, user}) => (
     <div className='repo_container'>
         <div>
             <div className='repo_title'>
                 <i className='fa fa-book pr-1' />
-                <a href='#'><span>Repo Title</span></a>
+                <a href='#'><span>{repo.name}</span></a>
             </div>
-            <span className='desc'>desc</span>
+            <span className='desc'>{repo.description}</span>
         </div>
-        <div className='d-flex'>
+        <div className='d-flex ml-1' styles={{marginLeft:'10px'}}>
             <div className='subtitle'>
                 <i className='fa fa-code pr-1' />
-                <span>language</span>
+                <span>{repo.language}</span>
             </div>
             <div className='subtitle'>
                 <i className='fa fa-star pr-1' />
-                <span>star</span>
+                <span>{repo.stargazers_count}</span>
             </div>
             <div className='subtitle'>
                 <i className='fa fa-code-fork pr-1' />
-                <span>fork</span>
+                <span>{repo.forks_count}</span>
             </div>
         </div>
     </div>

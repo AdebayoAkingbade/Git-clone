@@ -1,10 +1,14 @@
 import React from 'react'
 import Repo from './Repo'
-import './Repos.css'
+import './Repo.css'
 
-const Repos = () => {
+const Repos = ({user, repos}) => {
   return (
-    <Repo />
+    <section className="repos">
+    {repos.map((repo)=> (
+      <Repo key={repo.id} repo={repo} user={user} />
+    ))}
+    </section>
   )
 }
 
