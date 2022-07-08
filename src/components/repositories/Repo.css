@@ -40,7 +40,8 @@ i{
     -webkit-line-clamp: 1;
     line-height: 1.5rem;
     max-height: 1.5rem;
-    /* margin-left: -70px; */
+    justify-content: space-evenly;
+    /* margin-right: 5px; */
 }
 
 .repo_title > span{

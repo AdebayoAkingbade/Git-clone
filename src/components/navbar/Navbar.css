@@ -33,6 +33,11 @@
 .edit_nav{
     position: relative;
     left: -23px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20%;
+    width: 10%;
+    border-radius: 50%;
 }
 
 .NavDropdown{

@@ -5,7 +5,7 @@ const Repo = ({repo, user}) => (
     <div className='repo_container'>
         <div>
             <div className='repo_title'>
-                <i className='fa fa-book pr-1' />
+                <i className='fa fa-book pr-1' styles={{marginRight:'100px'}}/>
                 <a href='#'><span>{repo.name}</span></a>
             </div>
             <span className='desc'>{repo.description}</span>

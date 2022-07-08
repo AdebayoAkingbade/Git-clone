@@ -18,7 +18,7 @@ function App() {
       <BrowserRouter>
       <Switch>
         <Route path="/:userName" component={User} />
-        <Redirect to={'/bradtraversy'} />
+        <Redirect to={'/adebayoakingbade'} />
         {/* <User /> */}
       </Switch>
       </BrowserRouter>
