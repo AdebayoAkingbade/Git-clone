@@ -17,9 +17,6 @@ const Header = ({user}) => {
       <h3 style={{ color: 'white', marginTop: '9px', fontSize: '25px' }} className= "username">{user.name}</h3>
     </div>
     <Nav>
-      {/* <div className='img_only'> */}
-      {/* <img src={user.avatar_url} height='37' weight='70' className='nav_image' alt='profile_pic' /> */}
-      {/* </div> */}
       <NavDropdown id="nav-dropdown" className='edit_nav' style={{color: 'white', backgroundImage: `url(${user.avatar_url})`}} >
         <NavDropdown.Item eventKey="4.1">Profile</NavDropdown.Item>
         <NavDropdown.Item eventKey="4.2">Repos</NavDropdown.Item>

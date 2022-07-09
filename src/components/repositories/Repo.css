@@ -41,7 +41,6 @@ i{
     line-height: 1.5rem;
     max-height: 1.5rem;
     justify-content: space-evenly;
-    /* margin-right: 5px; */
 }
 
 .repo_title > span{
@@ -62,10 +61,6 @@ i{
     line-height: 1.5rem;
     max-height: 3rem;
 }
-
-/* .i{
-    color: gray;
-} */
 
 .subtitle{
     font-size: 12px;
