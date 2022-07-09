@@ -1,0 +1,15 @@
+.Login-header {
+    display: flex;
+    justify-content:center;
+    text-align:center;
+    align-items:center;
+}
+
+.Login-header a {
+    background-color: #532574;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 5px;
+    color: #ffff;
+    text-decoration: none;
+}

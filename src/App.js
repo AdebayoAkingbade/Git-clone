@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 export const ThemeContext = createContext(null)
 
 function App() {
-  const [ theme, setTheme] = useState('light')
+  const [ theme, setTheme ] = useState('light')
 
   const changeTheme = ()=>{
     setTheme((curr)=> (curr === 'light' ? 'dark' : 'light'))
@@ -22,8 +22,8 @@ function App() {
         {/* <User /> */}
       </Switch>
       </BrowserRouter>
-      <ReactSwitch onChange={changeTheme} checked={theme === 'dark'}/>
-        <label>{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</label>
+      <ReactSwitch onChange={changeTheme} checked={theme === 'dark'} style={{position:'relative', bottom:'1505px', left:'730px'}}/>
+        {/* <label>{theme === 'light' ? 'Light' : 'Dark'}</label> */}
       </div>
     </ThemeContext.Provider>
   );
